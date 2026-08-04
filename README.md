@@ -1,50 +1,152 @@
-# Welcome to your Expo app 👋
+# 🛒 Grocify
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A smart, minimal grocery planning app built with React Native and Expo. Plan your shopping list with categories, quantities, and priorities — all in a clean, modern interface.
 
-## Get started
+<p align="center">
+  <img src="./assets/images/signup.jpeg" width="250" />
+  <img src="./assets/images/list.jpeg" width="250" />
+  <img src="./assets/images/planner.jpeg" width="250" />
+   <img src="./assets/images/plannerform.jpeg" width="250" />
+   <img src="./assets/images/insights.jpeg" width="250" />
+</p>
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+## ✨ Features
 
-2. Start the app
+### 🔐 Authentication
+- Secure sign-up and sign-in flow powered by **Clerk**
+- Email verification on sign-up
+- Persistent session handling with route-based auth protection
+- Auto-redirect between signed-in and signed-out states
 
-   ```bash
-   npx expo start
-   ```
+### 📋 Grocery List Management
+- Add items with **name, quantity, category, and priority**
+- Categories: Produce, Dairy, Bakery, Pantry, Snacks, Vegetables, Karyana
+- Priority levels: Low, Medium, High — with color-coded visual indicators
+- Mark items as purchased with a single tap
+- **Clear completed items** with an animated loading state for clear feedback
 
-In the output, you'll find options to open the app in a
+### 📊 Insights
+- At-a-glance stats: pending items, high-priority items, and total units
+- Visual breakdown of your shopping list to help you plan smarter
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### 🎨 Premium UI/UX
+- Custom floating-style tab navigation with smooth active-state highlighting
+- Full **light/dark mode** support that adapts automatically to system theme
+- Rounded cards, soft shadows, and a cohesive color system built with **NativeWind (Tailwind CSS for React Native)**
+- Keyboard-aware forms that adjust smoothly when typing
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### 🗄️ Backend & Data
+- **PostgreSQL** database hosted on **Neon** (serverless Postgres)
+- Type-safe database queries using **Drizzle ORM**
+- API routes built directly into the app using **Expo Router's API Routes**
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 🛠️ Tech Stack
+
+| Category         | Technology                          |
+|-------------------|--------------------------------------|
+| Framework          | [Expo](https://expo.dev) / React Native |
+| Navigation         | Expo Router (file-based routing)     |
+| Authentication     | [Clerk](https://clerk.com)           |
+| Styling            | NativeWind (Tailwind CSS)            |
+| Database           | Neon (Serverless Postgres)           |
+| ORM                | Drizzle ORM                          |
+| State Management   | Zustand-style custom store           |
+| Icons              | Expo Vector Icons (Ionicons, FontAwesome6) |
+
+---
+
+## 📱 Screenshots
+
+<p align="center">
+  <img src="./assets/images/list.jpeg" width="220" alt="Home screen" />
+  <img src="./assets/screenshots/plannerform.jpeg" width="220" alt="Add item form" />
+</p>
+
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js (LTS recommended)
+- npm or yarn
+- Expo CLI
+- A Neon database (or any Postgres-compatible database)
+- A Clerk account for authentication keys
+
+### Installation
 
 ```bash
-npm run reset-project
+# Clone the repository
+git clone https://github.com/your-username/grocify.git
+cd grocify
+
+# Install dependencies
+npm install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### Environment Variables
 
-## Learn more
+Create a `.env` file in the root directory:
 
-To learn more about developing your project with Expo, look at the following resources:
+```env
+EXPO_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key
+DATABASE_URL=your_neon_database_url
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### Running the App
 
-## Join the community
+```bash
+# Start the development server
+npx expo start
+```
 
-Join our community of developers creating universal apps.
+> ⚠️ Some native features (e.g. native tabs, keyboard handling) require a **custom development build** rather than Expo Go. See [Expo's dev client docs](https://docs.expo.dev/develop/development-builds/introduction/) for setup instructions.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+To build a development client:
+
+```bash
+npx expo prebuild --clean
+npx expo run:android   # or npx expo run:ios
+```
+
+---
+
+## 📂 Project Structure
+
+```
+grocify/
+├── app/                    # Expo Router screens & layouts
+│   ├── (auth)/              # Sign-in / sign-up flow
+│   ├── (tabs)/               # Main app tabs (List, Planner, Insights)
+│   └── api/                  # Server API routes
+├── components/              # Reusable UI components
+├── store/                    # App state management
+├── lib/                       # Server utilities, DB client & schema
+└── assets/                   # Images, icons, and screenshots
+```
+
+---
+
+## 🧭 Roadmap
+
+- [ ] Shared/collaborative grocery lists
+- [ ] Price tracking per item
+- [ ] Reorder suggestions based on shopping history
+- [ ] Push notifications for reminders
+
+---
+
+## 📄 License
+
+This project is currently private and not licensed for public distribution.
+
+---
+
+## 🙌 Acknowledgements
+
+Built with ❤️ using Expo, Clerk, and Neon.
