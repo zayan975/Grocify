@@ -1,6 +1,6 @@
 import { useAuth } from "@clerk/expo";
 import { FlatList, Text, View } from "react-native";
-import { useGroceryStore } from "@/src/app/store/grocery-store";
+import { useGroceryStore } from "@/store/grocery-store";
 import TabScreenBackground from "../components/TabScreenBackground";
 import ListHeroCard from "../components/list/ListHeroCard";
 import PendingItemCard from "../components/list/PendingItemCard";
@@ -18,7 +18,7 @@ export default function Home() {
       data={pendingItems}
       keyExtractor={(item) => item.id}
       renderItem={({ item }) => <PendingItemCard item={item} />}
-      contentContainerStyle={{ padding: 20, gap: 14 }}
+      contentContainerStyle={{ padding: 20,paddingBottom: 100, gap: 14 }}
       contentInsetAdjustmentBehavior="automatic"
       ListHeaderComponent={
         <View style={{ gap: 14, paddingTop: 20 }}>

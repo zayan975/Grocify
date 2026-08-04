@@ -1,4 +1,4 @@
-import { useGroceryStore } from "@/src/app/store/grocery-store";
+import { useGroceryStore } from "@/store/grocery-store";
 import { Text, View } from "react-native";
 
 const ListHeroCard = () => {

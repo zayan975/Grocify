@@ -4,7 +4,7 @@ import { useColorScheme } from "nativewind";
 import { Ionicons } from "@expo/vector-icons";
 import { Platform } from "react-native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { useGroceryStore } from "@/src/app/store/grocery-store";
+import { useGroceryStore } from "@/store/grocery-store";
 import { useEffect } from "react";
 
 export default function TabsLayout() {

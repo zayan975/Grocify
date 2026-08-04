@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-export type GroceryCategory = "Produce" | "Dairy" | "Bakery" | "Pantry" | "Snacks";
+export type GroceryCategory = "Produce" | "Dairy" | "Bakery" | "Pantry" | "Snacks" | "Vegetables" | "Karyana";
 export type GroceryPriority = "low" | "medium" | "high";
 
 export type GroceryItem = {
