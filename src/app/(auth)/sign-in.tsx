@@ -9,10 +9,9 @@ export default function SignInScreen() {
   const { handleSocialAuth, loadingStrategy } = useSocialAuth();
 
   const isGoogleClicked = loadingStrategy === "oauth_google";
-  const isAppleClicked = loadingStrategy === "oauth_apple";
   const isGitHubClicked = loadingStrategy === "oauth_github";
 
-  const isLoading = isAppleClicked || isGitHubClicked || isGoogleClicked;
+  const isLoading = isGitHubClicked || isGoogleClicked;
 
   return (
     <SafeAreaView className="flex-1 bg-primary dark:bg-secondary" edges={["top"]}>
@@ -87,21 +86,7 @@ export default function SignInScreen() {
             <FontAwesome name="angle-right" size={18} color="#5f6e66" />
           </Pressable>
 
-          <Pressable
-            className={`mb-3 h-14 flex-row items-center rounded-2xl border border-foreground bg-foreground px-4 active:opacity-90 ${
-              isLoading ? "opacity-70" : ""
-            }`}
-            disabled={isLoading}
-            onPress={() => handleSocialAuth("oauth_apple")}
-          >
-            <View className="h-8 w-8 items-center justify-center rounded-full bg-white">
-              <FontAwesome6 name="apple" size={22} color="#111" />
-            </View>
-            <Text className="ml-3 flex-1 text-lg font-semibold text-background">
-              {isAppleClicked ? "Connecting Apple..." : "Continue with Apple"}
-            </Text>
-            <FontAwesome name="angle-right" size={18} color="#5f6e66" />
-          </Pressable>
+         
         </View>
 
         <Text className="mt-3 text-center text-sm leading-5 text-muted-foreground">
