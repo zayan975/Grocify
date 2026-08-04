@@ -62,12 +62,10 @@ A smart, minimal grocery planning app built with React Native and Expo. Plan you
 ## 📱 Screenshots
 
 <p align="center">
-  <img src="./assets/screenshots/home.png" width="220" alt="Home screen" />
-  <img src="./assets/screenshots/planner-form.png" width="220" alt="Add item form" />
-  <img src="./assets/screenshots/dark-mode.png" width="220" alt="Dark mode" />
+  <img src="./assets/images/list.jpeg" width="220" alt="Home screen" />
+  <img src="./assets/screenshots/plannerform.jpeg" width="220" alt="Add item form" />
 </p>
 
-> 📝 Add your own screenshots to `assets/screenshots/` and update the filenames above to match.
 
 ---
 
