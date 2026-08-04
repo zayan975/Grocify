@@ -62,8 +62,11 @@ A smart, minimal grocery planning app built with React Native and Expo. Plan you
 ## 📱 Screenshots
 
 <p align="center">
-  <img src="./assets/images/list.jpeg" width="220" alt="Home screen" />
-  <img src="./assets/screenshots/plannerform.jpeg" width="220" alt="Add item form" />
+  <img src="./assets/images/darksignup.jpeg" width="220" alt="Signup screen" />
+  <img src="./assets/images/darklist.jpeg" width="220" alt="list form" />
+    <img src="./assets/images/darkplanner.jpeg" width="220" alt="planner form" />
+    <img src="./assets/images/darkplannerform.jpeg" width="220" alt="form form" />
+    <img src="./assets/images/darkinsights.jpeg" width="220" alt="insights form" />
 </p>
 
 
